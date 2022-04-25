@@ -1,28 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>de.tr7zw</groupId>
-  <artifactId>item-nbt-parent</artifactId>
+  <groupId>com.burchard36.nbt</groupId>
+  <artifactId>item-nbt-api</artifactId>
   <version>1.0.0</version>
-  <packaging>pom</packaging>
-  <inceptionYear>2015</inceptionYear>
-  <organization>
-    <name>tr7zw</name>
-    <url>https://github.com/tr7zw/</url>
-  </organization>
-  <licenses>
-    <license>
-      <name>MIT License</name>
-      <url>https://opensource.org/licenses/mit-license.php</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
-  <modules>
-    <module>item-nbt-api</module>
-  </modules>
+  <packaging>jar</packaging>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
   <dependencies>
     <dependency>
       <groupId>org.spigotmc</groupId>
@@ -31,12 +18,14 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
+
   <repositories>
     <repository>
       <id>spigotmc-repo</id>
       <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
     </repository>
   </repositories>
+
   <build>
     <defaultGoal>clean install</defaultGoal>
     <plugins>
