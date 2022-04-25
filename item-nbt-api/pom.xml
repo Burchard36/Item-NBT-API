@@ -5,19 +5,14 @@
   <parent>
     <groupId>de.tr7zw</groupId>
     <artifactId>item-nbt-parent</artifactId>
-    <version>2.9.2</version>
+    <version>1.0.0</version>
   </parent>
 
   <artifactId>item-nbt-api</artifactId>
   <packaging>jar</packaging>
 
   <dependencies>
-    <dependency>
-      <groupId>de.tr7zw</groupId>
-      <artifactId>functional-annotations</artifactId>
-      <version>0.1-SNAPSHOT</version>
-      <scope>compile</scope>
-    </dependency>
+
   </dependencies>
 
   <build>
@@ -33,20 +28,6 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
         <version>3.2.4</version>
-        <configuration>
-          <createDependencyReducedPom>false</createDependencyReducedPom>
-          <relocations>
-            <relocation>
-              <pattern>de.tr7zw.annotations</pattern>
-              <shadedPattern>de.tr7zw.changeme.nbtapi.utils.annotations</shadedPattern>
-            </relocation>
-          </relocations>
-          <transformers>
-            <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
-              <resource>LICENSE</resource>
-            </transformer>
-          </transformers>
-        </configuration>
         <executions>
           <execution>
             <id>shade</id>

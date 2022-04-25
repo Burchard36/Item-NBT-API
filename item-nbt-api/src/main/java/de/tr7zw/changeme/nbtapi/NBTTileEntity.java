@@ -2,10 +2,8 @@ package de.tr7zw.changeme.nbtapi;
 
 import org.bukkit.block.BlockState;
 
-import de.tr7zw.annotations.FAUtil;
 import de.tr7zw.changeme.nbtapi.utils.MinecraftVersion;
 import de.tr7zw.changeme.nbtapi.utils.annotations.AvailableSince;
-import de.tr7zw.changeme.nbtapi.utils.annotations.CheckUtil;
 
 /**
  * NBT class to access vanilla tags from TileEntities. TileEntities don't
@@ -49,7 +47,6 @@ public class NBTTileEntity extends NBTCompound {
 	 */
 	@AvailableSince(version = MinecraftVersion.MC1_14_R1)
 	public NBTCompound getPersistentDataContainer() {
-		FAUtil.check(this::getPersistentDataContainer, CheckUtil::isAvaliable);
 		if (hasKey("PublicBukkitValues")) {
 			return getCompound("PublicBukkitValues");
 		} else {
